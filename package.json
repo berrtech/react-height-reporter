@@ -1,7 +1,7 @@
 {
   "name": "react-height-reporter",
   "version": "1.0.0",
-  "description": "React component-wrapper for reporting height changes of it's children",
+  "description": "React component-wrapper detecting height changes of it's children",
   "main": "lib/ReactHeightReporter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +20,14 @@
   ],
   "author": "Albert Batrshin <berrtech@gmail.com> (http://fcode.ninja/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berrtech/react-height-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/berrtech/react-height-reporter/issues"
+  },
+  "homepage": "https://github.com/berrtech/react-height-reporter",
   "peerDependencies": {
     "react": "^0.14 || ^15",
     "react-dom": "^0.14 || ^15"
