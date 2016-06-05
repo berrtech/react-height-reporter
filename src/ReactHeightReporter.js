@@ -4,12 +4,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ResizeSensor from './vendor/ResizeSensor/ResizeSensor.js';
 
+import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
+
 class HeightReporter extends React.Component {
+  static propTypes = {
+    children: React.PropTypes.node.isRequired,
+    onHeightChange: React.PropTypes.func.isRequired
+  }
+
   constructor(props){
     super(props);
-
-    if (!props.children) console.error('You must provide children for HeightReporter component!');
-
     this.ResizeSensor = null;
   }
 
@@ -19,6 +23,8 @@ class HeightReporter extends React.Component {
     this.props.onHeightChange(node.offsetHeight);
   }
 
+  shouldComponentUpdate = shouldComponentUpdate
+
   componentWillUnmount(){
     if (this.ResizeSensor){
       this.ResizeSensor.detach();
@@ -26,9 +32,11 @@ class HeightReporter extends React.Component {
   }
 
   render(){
+    const { children, onHeightChange, ...props } = this.props;
+
     return (
-      <div>
-        {this.props.children || null}
+      <div {...props}>
+        {children || null}
       </div>
     )
   }
