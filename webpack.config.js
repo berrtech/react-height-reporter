@@ -48,7 +48,7 @@ const development = {
 
 const dist = {
   devtool: '#source-map',
-  entry: './index.js',
+  entry: './src/ReactHeightReporter.js',
   output: {
     filename: `${require('./package.json').name}.js`,
     path: path.resolve('build'),
@@ -68,7 +68,7 @@ const dist = {
 
 const min = {
   devtool: '#source-map',
-  entry: './index.js',
+  entry: './src/ReactHeightReporter.js',
   output: {
     filename: `${require('./package.json').name}.min.js`,
     path: path.resolve('build'),
