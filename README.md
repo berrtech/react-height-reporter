@@ -17,7 +17,7 @@ Don't forget to manually install peer dependencies (`react`, `react-dom`) if you
 
 ## Usage
 ```js
-import HeigthReporter from 'react-height-reporter';
+import HeightReporter from 'react-height-reporter';
 
 <HeightReporter onHeightChange={height => console.log(height)}>
   <div>CONTENT GOES HERE</div>
