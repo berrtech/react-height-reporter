@@ -1,4 +1,4 @@
-# react-height-reporter
+# react-height-reporter [![npm](https://img.shields.io/npm/v/react-height-reporter.svg?style=flat-square)](https://www.npmjs.com/package/react-height-reporter)
 
 React component-wrapper detecting height changes of it's children.
 
@@ -19,7 +19,7 @@ Don't forget to manually install peer dependencies (`react`, `react-dom`) if you
 ```js
 import HeigthReporter from 'react-height-reporter';
 
-<HeightReporter onChangeHeight={height => console.log(height)}>
+<HeightReporter onHeightChange={height => console.log(height)}>
   <div>CONTENT GOES HERE</div>
   <div>AND HERE</div>
 </HeightReporter>
@@ -28,7 +28,7 @@ import HeigthReporter from 'react-height-reporter';
 ## Options
 
 
-#### `onChangeHeight`: PropTypes.func.isRequired
+#### `onHeightChange`: PropTypes.func.isRequired
 
 Callback called on mount and height changes
 
