@@ -1,6 +1,6 @@
 {
   "name": "react-height-reporter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React component-wrapper detecting height changes of it's children",
   "main": "src/ReactHeightReporter.js",
   "scripts": {
