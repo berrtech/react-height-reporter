@@ -15,12 +15,13 @@ class HeightReporter extends React.Component {
   constructor(props){
     super(props);
     this.ResizeSensor = null;
+    this.offsetHeight = null;
   }
 
   componentDidMount(){
-    const node = ReactDOM.findDOMNode(this);
-    this.ResizeSensor = new ResizeSensor(node, () => this.props.onHeightChange(node.offsetHeight));
-    this.props.onHeightChange(node.offsetHeight);
+    this.node = ReactDOM.findDOMNode(this);
+    this.ResizeSensor = new ResizeSensor(this.node, () => this.props.onHeightChange(this.node.offsetHeight));
+    this.props.onHeightChange(this.node.offsetHeight);
   }
 
   shouldComponentUpdate = shouldComponentUpdate
@@ -31,8 +32,18 @@ class HeightReporter extends React.Component {
     }
   }
 
+  componentDidUpdate(){
+    if (this.node && this.node.offsetHeight !== this.offsetHeight){
+      this.props.onHeightChange(this.node.offsetHeight);
+    }
+  }
+
   render(){
     const { children, onHeightChange, ...props } = this.props;
+
+    if (this.node){
+      this.offsetHeight = this.node.offsetHeight;
+    }
 
     return (
       <div {...props}>
