@@ -1,6 +1,6 @@
 # react-height-reporter [![npm](https://img.shields.io/npm/v/react-height-reporter.svg?style=flat-square)](https://www.npmjs.com/package/react-height-reporter)
 
-React component-wrapper detecting height changes of it's children.
+React component-wrapper detecting height changes of its children.
 
 Heavily inspired by [react-height](https://github.com/nkbt/react-height/) but somehow it wasn't accurate enough so I tried to make my own implementation.
 This implementation uses ResizeSensor from [css-element-queries](https://github.com/marcj/css-element-queries)
