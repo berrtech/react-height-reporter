@@ -1,3 +1,6 @@
+# Deprecation notice
+This is unmaintained. Check out https://github.com/berrtech/react-size-reporter
+
 # react-height-reporter [![npm](https://img.shields.io/npm/v/react-height-reporter.svg?style=flat-square)](https://www.npmjs.com/package/react-height-reporter)
 
 React component-wrapper detecting height changes of its children.
